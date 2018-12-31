@@ -15,6 +15,7 @@ def do(path):
     sigmoid_diff_filtered = filter.low_pass_filter(sigmoid_diff, 0.25)
 
     # 对三轴取模数据处理类
+		# first
     processor = DataSeriesProcessor(copy.copy(xyz_data))
 
     data_filtered = processor.low_pass_filter(0.1).get_current()
